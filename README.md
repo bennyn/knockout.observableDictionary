@@ -21,8 +21,8 @@ To loop over the items in the dictionary simply data bind to the items property.
 
     <ul data-bind="foreach: person.items">
         <li>
-            <span data-bind="key"></span>
-            <span data-bind="value"></span>
+            <span data-bind="text: key"></span>
+            <span data-bind="text: value"></span>
         </li>
     </ul>
 
