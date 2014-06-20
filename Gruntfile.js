@@ -1,10 +1,15 @@
 module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
   
+  directoryConfiguration = {
+    target: 'dist'
+  };  
+  
   grunt.initConfig({
+    dir: directoryConfiguration,
     pkg: grunt.file.readJSON('package.json'),
     clean: {
-      dist: 'dist',
+      dist: '<%= dir.target %>',
     },
     concat: {
       options: {
@@ -12,7 +17,7 @@ module.exports = function(grunt) {
       },
       js: {
         src: ['<%= pkg.name %>.js'],
-        dest: 'dist/js/<%= pkg.name %>.js'
+        dest: '<%= dir.target %>/<%= pkg.name %>.js'
       }
     },
     uglify: {
@@ -21,7 +26,7 @@ module.exports = function(grunt) {
           sourceMap: true       
         },
         files: {
-          'dist/js/<%= pkg.name %>.min.js': ['<%= concat.js.dest %>']
+          '<%= dir.target %>/<%= pkg.name %>.min.js': ['<%= concat.js.dest %>']
         }
       }
     }    

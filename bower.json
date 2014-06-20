@@ -1,12 +1,11 @@
 {
   "name": "knockout.observableDictionary",
   "description": "Implementation of an obversable dictionary for Knockout.",
-  "main": "./ko.observableDictionary.js",
+  "main": "./dist/knockout.observableDictionary.js",
   "authors": [
     {
       "name": "James Foster",
-      "email": "james.foster@thap.co.uk",
-      "homepage": ""
+      "email": "james.foster@thap.co.uk"
     }
   ],
   "ignore": [
