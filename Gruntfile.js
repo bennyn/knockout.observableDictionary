@@ -8,6 +8,12 @@ module.exports = function(grunt) {
   grunt.initConfig({
     dir: directoryConfiguration,
     pkg: grunt.file.readJSON('package.json'),
+    banner: '/*\n' +
+            ' * Knockout Observable Dictionary\n' +            
+            ' * (c) James Foster\n' +
+            ' * License: MIT (http://www.opensource.org/licenses/mit-license.php)\n' +
+            ' * <%= grunt.template.today("yyyy-mm-dd") %>\n' +
+            ' */',    
     clean: {
       dist: '<%= dir.target %>',
     },
@@ -23,6 +29,7 @@ module.exports = function(grunt) {
     uglify: {
       dist: {
         options: {
+          banner: '<%= banner %>',
           sourceMap: true       
         },
         files: {
