@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8" />
+    <script src="bower_components/knockout/dist/knockout.js"></script>
+    <script src="ko.observableDictionary.js"></script>
+  </head>
+  <body>
+    <div id="view">
+      <ul data-bind="foreach: person.items">
+        <li>
+          <span data-bind="text: 'Key: '+key()+' Value: '+value()"></span>
+        </li>
+      </ul>
+    </div>
+    <script>
+      console.group('Testing: ko.observableDictionary.js');
+
+      var logValue = function(key) {
+        console.group(key);
+        console.log('Key: ' + key);
+        console.log('Type: ' + typeof viewModel.person.get(key)());
+        console.log('Value: ' + viewModel.person.get(key)());
+        console.groupEnd();
+      };
+
+      var dictionary = {
+        name: 'Joe Bloggs',
+        height: 180,
+        'hair colour': 'brown'
+      };
+
+      var viewModel = {
+        person: new ko.observableDictionary(dictionary)
+      };
+
+      ko.applyBindings(viewModel, document.getElementById('view'));
+      
+      logValue('name');
+      logValue('height');
+      logValue('hair colour');
+
+      console.groupEnd();
+    </script>
+  </body>
+</html>
