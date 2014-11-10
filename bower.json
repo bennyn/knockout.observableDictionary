@@ -1,5 +1,5 @@
 {
-  "name": "knockout.observableDictionary",
+  "name": "knockout-observable-dictionary",
   "description": "Implementation of an obversable dictionary for Knockout.",
   "main": "dist/ko.observableDictionary.js",
   "authors": [
