@@ -37,7 +37,7 @@ You can even data bind to elements which don't exist yet. In this case, if you u
 To set a value on the dictionary in code use either:
 
 * the `set` method: `viewModel.person.set('hair colour', 'blue');`. or
-* the `get` method: `viewModel.person.get('hair colour')('blue');`.
+* the `get` method: `viewModel.person.get('hair colour');`.
 
 
 The obersvableArray methods `indexOf`, `remove`, `sort` and `push` have also been overridden to behave as expected with dictionaries e.g. `viewModel.person.remove('height')` and `viewModel.person.indexOf('hair colour')`
