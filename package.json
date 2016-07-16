@@ -1,5 +1,6 @@
 {
   "name": "knockout-observable-dictionary",
+  "version": "0.0.0",
   "devDependencies": {
     "grunt": "~0",
     "grunt-contrib-clean": "~0",
